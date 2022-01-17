@@ -1,4 +1,3 @@
 {
-  "/members/:member": "/members?member_id=:member",
-  "/tasks/:task": "/tasks?task_id=:task"
+  "/members/:member": "/members?member_id=:member"
 }

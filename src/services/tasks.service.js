@@ -6,6 +6,11 @@ export default {
     },
 
     create: (params) => {
+        if(params.id){
+            return AppService.patch(`/tasks/${params.id}`, params);
+        }
+
         return AppService.post('/tasks', params);
-    }
+    },
+
 }

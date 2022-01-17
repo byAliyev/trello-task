@@ -63,6 +63,11 @@ function App() {
         let currentTasks = tasks.filter(task => {
             if (task.id === id) {
                 task.status = cats[cat];
+
+                TasksService.create(task)
+                    .then(res => {
+                        console.log('Status changed');
+                    })
             }
             return task;
         });

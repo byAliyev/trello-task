@@ -6,7 +6,7 @@
       "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
       "assign_member_id": 1,
       "date": "03.01.2022",
-      "status": "To do"
+      "status": "In Progress"
     },
     {
       "id": 2,
@@ -30,7 +30,7 @@
       "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
       "assign_member_id": 4,
       "date": "07.01.2022",
-      "status": "In Review"
+      "status": "In Progress"
     },
     {
       "id": 5,
@@ -46,7 +46,7 @@
       "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
       "assign_member_id": 6,
       "date": "01.01.2022",
-      "status": "In Review"
+      "status": "In Progress"
     },
     {
       "id": 7,
@@ -86,7 +86,7 @@
       "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
       "assign_member_id": 3,
       "date": "07.01.2022",
-      "status": "In Review"
+      "status": "In Progress"
     },
     {
       "id": 12,
