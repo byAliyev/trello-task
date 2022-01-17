@@ -2,8 +2,8 @@
 
 ## Available scripts
 
-### npm run db:seed
+### `npm run db:seed`
 
-### npm run dev
+### `npm run dev`
 
-### npm run build
+### `npm run build`
