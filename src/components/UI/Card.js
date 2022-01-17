@@ -20,7 +20,7 @@ const Card = ({task, ...cardProps}) => {
         MembersService.selectById(task.assign_member_id)
             .then(res => {
                 if(res.status === 200){
-                    setMember(res.data[0]);
+                    setMember(res.data);
                 }
             })
     },[])
