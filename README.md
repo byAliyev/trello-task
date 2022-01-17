@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e1e1896f356492a11c286e944a447ab67e80171
 ## Available scripts
 
 ### `npm run db:seed`
