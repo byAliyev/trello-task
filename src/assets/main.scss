@@ -1,0 +1,418 @@
+
+@import "./helper/variables";
+// Simple reset
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+// Utilities
+
+.h6 {
+  height: 18px;
+}
+
+.w6 {
+  width: 18px;
+}
+
+.h17 {
+  height: 17px;
+}
+
+.w22 {
+  width: 22px;
+}
+
+.h20 {
+  height: 20px;
+}
+
+.w16 {
+  width: 16px;
+}
+
+.w24 {
+  width: 24px;
+}
+.h24 {
+  height: 24px;
+}
+
+// Title Component
+
+.title {
+  padding: 0 16px;
+  color: $black;
+  font-weight: 700;
+  text-align: center;
+
+  &-primary {
+    font-size: 16px;
+  }
+
+  &-secondary {
+    font-size: 15px;
+  }
+
+  &-card {
+    text-align: left;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &-form {
+    font-family: "Public Sans", serif;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 25px;
+    color: #151515;
+  }
+}
+
+// Label Component
+
+.label {
+  background: $main-color;
+  color: $white;
+  padding: 4px 12px;
+  border-radius: 5px;
+
+  &-primary {
+    font-size: 16px;
+  }
+
+  &-secondary {
+    font-size: 15px;
+  }
+}
+
+.m-2 {
+  margin-right: 16px;
+}
+.border-right {
+
+}
+
+// Button Component
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+
+  &-primary {
+    background: $main-color;
+    color: $white;
+    font-size: 15px;
+    padding: 11px 20px;
+    border-radius: 5px;
+  }
+  &-primary:hover {
+    color: rgba($white, 0.7);
+  }
+
+  &-text {
+    color: $main-color;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &-text:hover {
+    color: rgba($main-color, 0.7);
+  }
+
+  &-cancel, &-save {
+    font-family: "Work Sans", serif;
+    font-size: 18px;
+    font-weight: 600;
+    width: 179px;
+    height: 55px;
+    border-radius: 10px;
+  }
+
+  &-cancel {
+    background: rgba(21, 25, 32, 0.5);
+    background: #F5F7FB;
+    margin-right: 22px;
+  }
+
+  &-save {
+    background: $main-color;
+    color: #fff;
+  }
+}
+
+
+// Search Input Component
+
+.search {
+  position: relative;
+  color: $gallery-count-color;
+
+  &-search {
+    border: 1px solid $search-border-color;
+    border-radius: 4px;
+    padding: 11px 57px;
+    outline: none;
+    font-size: 15px;
+  }
+  &-icon {
+    position: absolute;
+    left: 22px;
+    top: 2px
+  }
+
+  &-search::placeholder {
+    color: $gallery-count-color;
+  }
+
+  &-search:focus {
+    outline: none;
+  }
+
+}
+
+// Badge component
+
+.badge {
+  padding: 8px 11px;
+  margin: 0 5px;
+  color: $black;
+  background: $badge-bg;
+  border-radius: 50%;
+  font-weight: 700;
+  text-align: center;
+  font-size: 13px;
+}
+
+// Row  component
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 770px;
+}
+
+// Col component
+
+.col {
+  min-height: 100%;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12px;
+  }
+
+  &-3 {
+    width: calc((100% - ( #{$margin} * 3)) / 4);
+    background: $search-border-color;
+    border-radius: 5px 5px 0px 0px;
+    padding: 16px;
+    align-self: stretch;
+  }
+
+  &__content {
+    cursor: move;
+    cursor: grab;
+  }
+}
+
+// Card component
+
+.card {
+  margin-top: 8px;
+  background: $white;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+
+  &__content, &__footer {
+    padding: 12px;
+  }
+
+  &__desc {
+    padding: 12px 0 16px 0;
+    font-weight: 400;
+    font-size: 15px;
+    color: $card-desc-color;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 15px;
+      font-weight: 700;
+      margin-left: 4px;
+    }
+  }
+
+  &__owner {
+    display: flex;
+  }
+
+  &__photo {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    border: 2px solid $white;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $search-border-color;
+  }
+}
+
+// Modal component
+
+.modal {
+
+  &__backdrop {
+    background: rgba(0, 0, 0, 0.12);
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__container {
+    background: #fff;
+    box-shadow: 0 11.6189px 124.28px rgba(37, 72, 153, 0.17);
+    border-radius: 24px;
+    max-width: 100%;
+    margin: 100px auto;
+    padding: 22px;
+    width: 594px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10px;
+  }
+
+  &__content {
+    padding: 0 10px;
+  }
+
+}
+
+// Form component
+.form {
+  .group {
+    width: 100%;
+    padding-top: 36px;
+  }
+
+  padding-bottom: 60px;
+}
+
+// Form Input component
+
+.input {
+  font-family: "Public Sans", serif;
+  font-weight: 600;
+  width: 100%;
+  background: #F5F7FB;
+  border-radius: 7.68293px;
+  border: none;
+  outline: none;
+  padding: 26px 16px;
+  font-size: 20px;
+
+  &::placeholder {
+    color: #151515;
+  }
+
+  &-text {
+
+  }
+
+  &-textarea {
+    resize: none;
+  }
+
+  &-date:focus + &-icon {
+    display: none;
+  }
+
+  &-label {
+    position: relative;
+  }
+
+  &-icon {
+    position: absolute;
+    top: -3px;
+    right: 16px;
+  }
+
+  &-select {
+    background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+    background-position: 96% center;
+    background-repeat: no-repeat;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  &::-ms-expand {
+    display: none !important;
+  }
+}
+
+
+.custom-input-file {
+  display: flex;
+  align-items: center;
+  background: #F5F7FB;
+  border-radius: 7.68293px;
+  border: none;
+  outline: none;
+  padding: 26px 16px;
+}
+.custom-input-file-span {
+  font-family: "Public Sans", serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 48px;
+}
+
+
+// Collapse component
+
+.collapse {
+  position: relative;
+
+  &-content {
+    width: 387px;
+    background: $white;
+    box-shadow: 0px 11.6189px 124.28px rgba(37, 72, 153, 0.17);
+    border-radius: 23.2377px;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    padding: 32px;
+
+  }
+
+  &-footer {
+      display: flex;
+      justify-content: flex-end;
+  }
+}

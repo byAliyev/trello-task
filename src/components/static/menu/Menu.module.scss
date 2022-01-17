@@ -1,0 +1,30 @@
+@import './src/assets/helper/variables';
+
+.menu {
+  height: 68px;
+  background: $main-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+
+  &__item {
+    width: 134px;
+  }
+
+  &__link, &__link:link, &__link:visited {
+    color: $white;
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  &__link:hover, &__link.active {
+    color: #B1D0E0;
+  }
+}
