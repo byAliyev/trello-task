@@ -1,4 +1,3 @@
-# trello-task
 
 ## Available scripts
 
